@@ -1,0 +1,15 @@
+h1 {
+  color: tomato;
+}
+h2 {
+  color: tomato;
+}
+ul , li {
+  color: red
+}
+.yellow-bg {
+  background-color: yellowgreen !important;
+}
+.large-text{
+  font-size: 2em;
+}
