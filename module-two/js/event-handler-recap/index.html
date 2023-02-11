@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Events Recap</title>
+</head>
+<body>
+  <h1>DOM Recap</h1>
+  <!-- option one  -->
+  <p id="text-updated">Default Text</p>
+  <button onclick="update()">Update Default Text</button>
+
+  <!-- option two -->
+  <p id="text">Default Input Text</p>
+  <input id="input" type="text">
+  <br><br>
+  <button id="btn">Update Input</button>
+  <script src="events-recap.js"></script>
+  <script>
+    document.getElementById('btn').addEventListener('click', function(){
+      const input = document.getElementById('input');
+
+      const inputValue = input.value
+      input
+      
+      const text = document.getElementById('text');
+
+      text.innerText = inputValue;
+      input.value = '';
+      
+    })
+  </script>  
+</body>
+</html>

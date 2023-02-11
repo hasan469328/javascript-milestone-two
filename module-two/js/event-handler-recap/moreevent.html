@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Event</title>
+</head>
+<body>
+  <h1>More Events Explore</h1>
+
+  <!-- Mouse Enter Event -->
+  <button id="mouse-enter">Mouse Enter</button>
+
+  <!-- Mouse Move Inside the Button -->
+  <button id="mouse-move">Mouse Move Inside The Button</button>
+
+  <!-- focus and blur on input -->
+  <input type="text" id="focus-blur">
+
+  <!-- keydown, keypress, keyup -->
+  <input type="text" id="key-down" placeholder="keydown">
+  <input type="text" id="key-press" placeholder="keypress">
+  <input type="text" id="key-up" placeholder="keyup">
+
+  <script>
+    // Mouse enter
+    document.getElementById('mouse-enter').addEventListener('mouseenter', function(){
+      console.log("Mouse Enter Inside the button")
+    });
+
+    // Mouse Move
+    document.getElementById('mouse-move').addEventListener('mousemove', function(){
+      console.log('Mouse Move inside the button');
+    });
+
+    // focus on input
+    document.getElementById('focus-blur').addEventListener('focus', function(){
+      console.log('input button focused')
+    });
+
+    // blur input
+    document.getElementById('focus-blur').addEventListener('blur', function(){
+      console.log("input unfocused or blur")
+    });
+
+    // keydown event
+    document.getElementById('key-down').addEventListener('keydown', function(event){
+      console.log(event.target.value);
+    });
+
+    // keypress event
+    document.getElementById('key-press').addEventListener('keypress', function(event){
+      console.log(event.target.value)
+    });
+
+    // keyup event
+    document.getElementById('key-up').addEventListener('keyup', function(event){
+      console.log(event.target.value)
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Box</title>
+</head>
+<body>
+  <div id="article">
+    <h1>My Article</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A incidunt ex cumque ut hic, atque nobis amet temporibus vitae impedit ab vel repellendus velit unde, consequuntur modi assumenda cum possimus iure quae aperiam ad veniam facilis illum? Non voluptatum illo ad! Rerum suscipit provident in delectus error deleniti aspernatur expedita.</p>
+    <p>Sunt, error beatae libero assumenda sapiente ullam placeat, expedita adipisci commodi accusantium ea vitae omnis reprehenderit nihil nesciunt est delectus voluptatum id, molestias repellendus eum exercitationem. Impedit illum dolorem distinctio officiis iusto corporis quisquam! Minima, molestias alias eius rem illum et reprehenderit earum error ut quis beatae mollitia porro veritatis.</p>
+    <p>Voluptatibus sit sequi debitis incidunt itaque ut expedita, quam, alias libero possimus blanditiis autem est laudantium maiores facere adipisci voluptatem. Asperiores optio aperiam nam ipsum! Fugit est nihil explicabo consequatur architecto? Est maxime odit possimus officia temporibus cupiditate. Odio earum nihil asperiores voluptatem ratione tempora saepe architecto at aliquam! Quos.</p>
+  </div>
+  <div>
+    <textarea name="" id="new-comment" cols="60" rows="05"></textarea>
+    <br><br>
+    <button id="post-btn">Post</button>
+  </div>
+  <script>
+    document.getElementById('post-btn').addEventListener('click', function(){
+      const textArea = document.getElementById('new-comment');
+      const textAreaValue = textArea.value;
+      
+
+      const newP = document.createElement('p');
+      newP.innerText = textAreaValue;
+      
+      document.getElementById('article').appendChild(newP);
+
+      textArea.value = '';
+    })
+  </script>
+</body>
+</html>
